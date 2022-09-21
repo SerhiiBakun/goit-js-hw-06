@@ -8,7 +8,7 @@ const refs = {
 refs.nameInput.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-  event.currentTarget.value === ''
+  event.currentTarget.value.trim() === ''
     ? (refs.nameOutput.textContent = 'Anonymous')
     : (refs.nameOutput.textContent = event.currentTarget.value);
 }
